@@ -1,0 +1,121 @@
+
+おすすめ:
+
+- concept: 公開
+- pattern: 公開
+- case: 公開または限定公開
+- observation: 一部公開
+- note: 非公開または下書き
+
+## WordPress 実装方針
+
+### 必要な機能
+
+- カスタム投稿タイプ
+- カスタムタクソノミー
+- カスタムフィールド
+- 関連投稿表示
+- 一覧ページ
+- 概念別アーカイブ
+- 更新日表示
+
+### 推奨プラグイン
+
+- Advanced Custom Fields
+- Custom Post Type UI、または functions.php で直接実装
+- SEO プラグイン
+- 関連投稿を自前で表示できるテーマ実装
+
+### テーマ側で作るテンプレート
+
+- `archive-concept.php`
+- `single-concept.php`
+- `archive-observation.php`
+- `single-observation.php`
+- `archive-pattern.php`
+- `single-pattern.php`
+- `archive-case.php`
+- `single-case.php`
+- `archive-note.php`
+- `single-note.php`
+- `taxonomy-theme.php`
+- `taxonomy-capability.php`
+- `front-page.php`
+
+## 最初の進行ステップ
+
+### Step 1
+
+WordPress に以下のカスタム投稿タイプを作る。
+
+- concept
+- observation
+- pattern
+- case
+- note
+
+### Step 2
+
+以下のタクソノミーを作る。
+
+- theme
+- capability
+- source
+- maturity
+
+### Step 3
+
+concept を7件登録する。
+
+- インサイト
+- 物語構造
+- キュレーション
+- コピーライティング
+- メタファー
+- ナラティブ
+- 認知再評価
+
+### Step 4
+
+pattern を5件登録する。
+
+- 違和感からインサイトを出す型
+- 事実を物語に変える型
+- 特徴をメタファーに変える型
+- 情報をキュレーションする型
+- コピーにする前の問い
+
+### Step 5
+
+Observation を10件ほど入れる。
+
+まだ完成度は求めない。違和感や問いを残す。
+
+### Step 6
+
+トップページと各一覧ページで、蓄積の全体像が見えるようにする。
+
+## 判断基準
+
+この情報は、以下のどれかに当てはまるなら残す。
+
+- 観察としてあとで使えそう
+- 概念の理解を深める
+- 実践時の判断材料になる
+- 言葉や表現に変換できそう
+- 他の情報と接続すると意味が増える
+
+逆に、以下だけの情報は残さない。
+
+- 概念の一般的な説明だけ
+- 読んで終わる要約だけ
+- 自分の観察や問いがない引用だけ
+- 使いどころがない知識だけ
+
+## この設計の核
+
+概念は、説明するためにあるのではない。
+
+観察を深め、問いを立て、意味を作り、表現に変えるためにある。
+
+gainen design の情報資産は、知識の保管庫ではなく、好奇心を使える形へ育てる場所として運用する。
